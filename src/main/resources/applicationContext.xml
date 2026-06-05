@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--     autowire mode =no -->
+    <!--     <bean id="laptop" class="org.example.Laptop"> -->
+    <!--     <property name="brand" value="mac"/> -->
+    <!--     <property name="price" value="2000"/> -->
+    <!--     <property name="model" value="2025"/> -->
+    <!--         <property name="charger" ref="charger01"/> -->
+    <!--     </bean> -->
+
+    <!--         autowire mode =byType -->
+    <!--         <bean id="laptop" class="org.example.Laptop" autowire="byType"> -->
+    <!--         <property name="brand" value="mac"/> -->
+    <!--         <property name="price" value="2000"/> -->
+    <!--         <property name="model" value="2025"/> -->
+    <!--         </bean> -->
+
+    <!--         autowire mode =byName -->
+    <bean id="laptop" class="org.example.Laptop" autowire="byName">
+        <property name="brand" value="mac"/>
+        <property name="price" value="2000"/>
+        <property name="model" value="2025"/>
+    </bean>
+    <bean id="charger" class="org.example.Charger">
+        <property name="ctype" value="typeC"/>
+        <property name="cprice" value="50"/>
+        <property name="cmodel" value="2023"/>
+    </bean>
+    <bean id="socket" class="org.example.Socket">
+        <property name="model" value="100Watt"/>
+        <property name="price" value="40"/>
+    </bean>
+</beans>
