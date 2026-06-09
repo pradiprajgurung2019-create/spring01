@@ -22,5 +22,6 @@ public class App {
 
         //this is commented by PRG
         System.out.println("You are HIRED!!");
+        System.out.println(" you are PROMOTED");
     }
 }
